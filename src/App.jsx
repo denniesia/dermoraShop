@@ -1,6 +1,7 @@
-import FeatureSection from "./components/FeatureSection";
+import FeatureSection from "./components/features/FeatureSection";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import ProductSection from "./components/products/ProductSection";
 
 function App() {
     return (
@@ -11,46 +12,7 @@ function App() {
             {/* Features */}
             <FeatureSection/>
             {/* Products */}
-            <section id="products" className="py-16 max-w-7xl mx-auto px-8">
-                <h2 className="text-4xl font-bold text-center mb-12">
-                    Best Selling Skincare
-                </h2>
-                <div className="grid md:grid-cols-3 gap-8">
-                    <article className="border rounded-3xl p-6 shadow hover:shadow-lg transition">
-                        <img
-                            loading="lazy"
-                            src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc"
-                            className="rounded-xl mb-4"
-                            alt="Hydrating serum skincare product"
-                        />
-                        <h3 className="font-semibold text-lg">Hydrating Serum</h3>
-                        <p className="text-gray-500 mb-3">Intense hydration for dry skin</p>
-                        <span className="font-bold text-lg">$29</span>
-                    </article>
-                    <article className="border rounded-3xl p-6 shadow hover:shadow-lg transition">
-                        <img
-                            loading="lazy"
-                            src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273"
-                            className="rounded-xl mb-4"
-                            alt="Vitamin C cream skincare product"
-                        />
-                        <h3 className="font-semibold text-lg">Vitamin C Cream</h3>
-                        <p className="text-gray-500 mb-3">Brightens and evens skin tone</p>
-                        <span className="font-bold text-lg">$35</span>
-                    </article>
-                    <article className="border rounded-3xl p-6 shadow hover:shadow-lg transition">
-                        <img
-                            loading="lazy"
-                            src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd"
-                            className="rounded-xl mb-4"
-                            alt="Gentle cleanser skincare product"
-                        />
-                        <h3 className="font-semibold text-lg">Gentle Cleanser</h3>
-                        <p className="text-gray-500 mb-3">Daily face wash for all skin types</p>
-                        <span className="font-bold text-lg">$19</span>
-                    </article>
-                </div>
-            </section>
+            <ProductSection/>
             {/* CTA */}
             <section className="bg-gradient-to-r from-pink-500 to-rose-500 text-white text-center py-16 px-6">
                 <h2 className="text-4xl font-bold mb-4">Get 10% Off Your First Order</h2>
