@@ -1,54 +1,15 @@
+import FeatureSection from "./components/FeatureSection";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
     return (
         <>
-
-            <Header></Header>
-            {/* Hero */}
-            <section className="grid md:grid-cols-2 items-center px-8 py-16 gap-10 max-w-7xl mx-auto">
-                <div>
-                    <h2 className="text-5xl font-extrabold leading-tight mb-6">
-                        Healthy Skin Starts Here
-                    </h2>
-                    <p className="text-lg text-gray-600 mb-8">
-                        Clinically tested, naturally derived skincare designed to hydrate,
-                        repair, and enhance your glow.
-                    </p>
-                    <button className="bg-pink-500 text-white px-8 py-4 rounded-2xl shadow-lg hover:bg-pink-600 transition">
-                        Shop Now
-                    </button>
-                </div>
-                <img
-                    loading="lazy"
-                    src="https://images.unsplash.com/photo-1556228720-195a672e8a03"
-                    className="rounded-3xl shadow-xl"
-                    alt="Natural skincare products"
-                />
-            </section>
+            <Header/>
+      
+            <Hero/>
             {/* Features */}
-            <section className="bg-gray-50 py-16">
-                <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center px-6">
-                    <div>
-                        <h3 className="font-semibold text-xl mb-3">Clean Ingredients</h3>
-                        <p className="text-gray-600">
-                            Free from parabens, sulfates, and harmful chemicals.
-                        </p>
-                    </div>
-                    <div>
-                        <h3 className="font-semibold text-xl mb-3">Dermatologist Tested</h3>
-                        <p className="text-gray-600">
-                            Proven safe for sensitive and all skin types.
-                        </p>
-                    </div>
-                    <div>
-                        <h3 className="font-semibold text-xl mb-3">Eco-Friendly</h3>
-                        <p className="text-gray-600">
-                            Sustainable packaging and cruelty-free formulas.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <FeatureSection/>
             {/* Products */}
             <section id="products" className="py-16 max-w-7xl mx-auto px-8">
                 <h2 className="text-4xl font-bold text-center mb-12">
