@@ -1,4 +1,5 @@
 import FeatureSection from "./components/features/FeatureSection";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ProductSection from "./components/products/ProductSection";
@@ -30,9 +31,7 @@ function App() {
                 </form>
             </section>
             {/* Footer */}
-            <footer className="py-8 text-center text-gray-500 text-sm">
-                <p>© 2026 GlowSkin. All rights reserved.</p>
-            </footer>
+            <Footer></Footer>
         </>
 
     );
