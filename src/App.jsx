@@ -1,24 +1,14 @@
-import DiscountSection from "./components/DiscountSection";
-import FeatureSection from "./components/features/FeatureSection";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import ProductSection from "./components/products/ProductSection";
+import { Route, Routes } from "react-router";
+import HomePage from "./components/HomePage";
+
 
 function App() {
     return (
-        <>
-            <Header/>
-      
-            <Hero/>
-            <FeatureSection/>
-            <ProductSection/>
-       
-            <DiscountSection/>
-       
-            <Footer/>
-        </>
 
+        <Routes>
+            <Route index element={<HomePage/>} />
+        </Routes>
+        
     );
 }
 
