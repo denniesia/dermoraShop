@@ -7,15 +7,21 @@ import TitleSection from "../components/TitleSection";
 
 export default function ShopPage() {
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    const getProducts = async () => {
-        const res = await fetch('https://dummyjson.com/products/category/beauty');
-        const data = await res.json();
-       setProducts(data.products)
-    }
-
-    console.log(products)
     useEffect (() => {
+        async function getProducts() {
+            try {
+                const res = await fetch('https://dummyjson.com/products/category/beauty');
+                const data = await res.json();
+                setProducts(data.products)
+                setLoading(false);
+            } catch(error) {
+                console.error("Error fetching products", error);
+                setLoading(false)
+            }
+            
+        }
         getProducts()
     }, [])
 
