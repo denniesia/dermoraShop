@@ -1,6 +1,6 @@
 export default function ProductItem({img, title, description, price}) {
     return (
-        <article className="border rounded-3xl p-6 shadow hover:shadow-lg transition cursor-pointer">
+        <article className="border rounded-3xl p-6 shadow-2xs hover:shadow-2xl transition cursor-pointer">
             <img
                 loading="lazy"
                 src={img}

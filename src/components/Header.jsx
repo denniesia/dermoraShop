@@ -6,7 +6,7 @@ export default function Header() {
                 <a href="#" className="hover:text-pink-500">
                     Home
                 </a>
-                <a href="#products" className="hover:text-black text-pink-500">
+                <a href="" className="hover:text-black text-pink-500">
                     Shop
                 </a>
                 <a href="#about" className="hover:text-pink-500">

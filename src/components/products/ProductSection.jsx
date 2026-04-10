@@ -12,7 +12,7 @@ export default function ProductSection() {
         },
         {
             id: 2,
-            img: "https://images.unsplash.com/photo-1596755389378-c31d21fd1273",
+            img: "https://images.unsplash.com/photo-1723951174326-2a97221d3b7f?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             title: "Vitamin C Cream",
             description: "Brightens and evens skin tone",
             price: "$35"
@@ -20,7 +20,7 @@ export default function ProductSection() {
         },
         {
             id: 3,
-            img: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc",
+            img: "https://images.unsplash.com/photo-1748639320154-6ba118bccc74?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             title: "Gentle Cleanser",
             description: "Daily face wash for all skin types",
             price: "$19"
