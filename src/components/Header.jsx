@@ -13,7 +13,7 @@ export default function Header() {
                     Shop
                 </a>
 
-                <a href="#" className="flex items-center gap-2 hover:text-pink-500">
+                <a href="/cart" className="flex items-center gap-2 hover:text-pink-500">
                     <FiShoppingCart className="w-6 h-6 " />
                 </a>
             </nav>
