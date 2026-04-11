@@ -1,16 +1,45 @@
-# React + Vite
+# 🛒 React eCommerce Store -> Dermora Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A modern and responsive eCommerce web application built with React, Context API, and Tailwind CSS.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)
+![Vite](https://img.shields.io/badge/Vite-fast-purple?style=for-the-badge&logo=vite)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-styled-38B2AC?style=for-the-badge&logo=tailwind-css)
+![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🛍️ Browse products from API
+- 🛒 Add to cart system
+- ➕ Quantity management per item
+- ❌ Remove items from cart
+- 💰 Automatic total price calculation
+- ⏳ Loading states for better UX
+- 📱 Fully responsive design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Demo
+
+> Coming soon 🚧
+
+---
+
+## 🧰 Tech Stack
+
+- ⚛️ React (Vite)
+- 🧠 Context API (State Management)
+- 🎨 Tailwind CSS
+- 🌐 Fetch API
+- 🔀 React Router
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/your-username/ecommerce-store.git
