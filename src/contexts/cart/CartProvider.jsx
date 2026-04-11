@@ -12,6 +12,7 @@ export default function CartProvider({children}) {
 
     const addToCart = (product) => {
         setCart((prevCart) => [...prevCart, product])
+        console.log(cart)
     };
 
     const removeFromCart = (productId) => {
