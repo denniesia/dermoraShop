@@ -7,7 +7,6 @@
 ![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)
 ![Vite](https://img.shields.io/badge/Vite-fast-purple?style=for-the-badge&logo=vite)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-styled-38B2AC?style=for-the-badge&logo=tailwind-css)
-![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
 ---
 
@@ -19,7 +18,7 @@
 - ❌ Remove items from cart
 - 💰 Automatic total price calculation
 - ⏳ Loading states for better UX
-- 📱 Fully responsive design
+
 
 ---
 
@@ -42,4 +41,4 @@
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/ecommerce-store.git
+git clone https://github.com/denniesia/dermoraShop
