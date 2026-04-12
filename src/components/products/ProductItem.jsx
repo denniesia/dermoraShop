@@ -6,7 +6,7 @@ export default function ProductItem({ product }) {
     const { addToCart } = useContext(CartContext);
 
     return (
-        <article className="border rounded-3xl p-6 shadow-sm hover:shadow-xl transition cursor-pointer flex flex-col">
+        <article className="border rounded-3xl p-6 shadow-sm hover:shadow-xl transition flex flex-col">
             <img
                 loading="lazy"
                 src={product.image}
@@ -39,7 +39,7 @@ export default function ProductItem({ product }) {
             <div className="flex items-center justify-between mt-auto">
                 <span className="font-bold text-lg">€{product.price}</span>
 
-                <button className="bg-pink-500 hover:bg-pink-600 text-white text-sm px-4 py-2 rounded-xl transition" onClick={() => addToCart(product)}>
+                <button className="bg-pink-500 hover:bg-pink-600 text-white text-sm px-10 py-2 rounded-xl transition hover:cursor-pointer" onClick={() => addToCart(product)}>
                     Buy
                 </button>
             </div>

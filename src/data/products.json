@@ -1,105 +1,167 @@
 {
-	"products": [
-		{
-			"id": "1",
-			"name": "HydraGlow Moisturizer",
-			"description": "A lightweight daily moisturizer that hydrates and brightens the skin.",
-			"price": 19.99,
-			"brand": "GlowLab",
-			"rating": 4.5,
-			"image": "https://images.unsplash.com/photo-1629732047847-50219e9c5aef?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D0",
-			"stock": 99,
-            "comments": [
-				{
-					"username": "skincare_lover",
-					"content": "Super hydrating and absorbs quickly!"
-				},
-				{
-					"username": "anna92",
-					"content": "Great for daily use, my skin feels soft."
-				}
-			]
-		},
-		{
-			"id": "2",
-			"name": "ClearSkin Foaming Cleanser",
-			"description": "Gentle foaming cleanser that removes impurities without drying.",
-			"price": 14.5,
-			"brand": "PureDerm",
-			"rating": 4.2,
-			"image": "https://images.unsplash.com/photo-1716043426139-3573390e8477?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-			"stock": 90,
-            "comments": [
-				{
-					"username": "john_doe",
-					"content": "Works well for my oily skin."
-				},
-				{
-					"username": "lisa_beauty",
-					"content": "Nice cleanser but a bit drying in winter."
-				}
-			]
-		},
-		{
-			"id": "3",
-			"name": "Vitamin C Brightening Serum",
-			"description": "A powerful serum that evens skin tone and boosts radiance.",
-			"price": 29.99,
-			"brand": "SkinRevive",
-			"rating": 4.7,
-			"image": "https://images.unsplash.com/photo-1723951174326-2a97221d3b7f?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-			"stock": 9,
-            "comments": [
-				{
-					"username": "glowqueen",
-					"content": "My skin looks brighter after just a week!"
-				},
-				{
-					"username": "mark87",
-					"content": "Slight tingling but results are worth it."
-				}
-			]
-		},
-		{
-			"id": "4",
-			"name": "AquaRepair Night Cream",
-			"description": "Rich night cream that repairs and nourishes while you sleep.",
-			"price": 24.99,
-			"brand": "DermaCare",
-			"rating": 4.6,
-			"image": "https://images.unsplash.com/photo-1612218934910-65d6b6fe36eb?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "stock": 0,
-			"comments": [
-				{
-					"username": "nightowl",
-					"content": "Wake up with super soft skin!"
-				},
-				{
-					"username": "emily_x",
-					"content": "A bit heavy but perfect for dry skin."
-				}
-			]
-		},
-		{
-			"id": "5",
-			"name": "SPF 50 Daily Sunscreen",
-			"description": "Non-greasy sunscreen with broad-spectrum protection.",
-			"price": 17.75,
-			"brand": "SunShield",
-			"rating": 4.4,
-			"image": "https://images.unsplash.com/photo-1689414480286-aae7c21fe1e2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-			"stock": 20,
-            "comments": [
-				{
-					"username": "beachfan",
-					"content": "No white cast, love it!"
-				},
-				{
-					"username": "tom_s",
-					"content": "Good protection but reapply often."
-				}
-			]
-		}
-	],
-	"$schema": "./node_modules/json-server/schema.json"
+  "products": [
+    {
+      "id": "1",
+      "name": "HydraGlow Moisturizer",
+      "description": "A lightweight daily moisturizer that hydrates and brightens the skin.",
+      "price": 19.99,
+      "brand": "GlowLab",
+      "rating": 4.5,
+      "image": "https://images.unsplash.com/photo-1629732047847-50219e9c5aef?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D0",
+      "stock": 99,
+      "comments": [
+        {
+          "username": "skincare_lover",
+          "content": "Super hydrating and absorbs quickly!"
+        },
+        {
+          "username": "anna92",
+          "content": "Great for daily use, my skin feels soft."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "ClearSkin Foaming Cleanser",
+      "description": "Gentle foaming cleanser that removes impurities without drying.",
+      "price": 14.5,
+      "brand": "PureDerm",
+      "rating": 4.2,
+      "image": "https://images.unsplash.com/photo-1716043426139-3573390e8477?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "stock": 90,
+      "comments": [
+        {
+          "username": "john_doe",
+          "content": "Works well for my oily skin."
+        },
+        {
+          "username": "lisa_beauty",
+          "content": "Nice cleanser but a bit drying in winter."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Vitamin C Brightening Serum",
+      "description": "A powerful serum that evens skin tone and boosts radiance.",
+      "price": 29.99,
+      "brand": "SkinRevive",
+      "rating": 4.7,
+      "image": "https://images.unsplash.com/photo-1723951174326-2a97221d3b7f?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "stock": 9,
+      "comments": [
+        {
+          "username": "glowqueen",
+          "content": "My skin looks brighter after just a week!"
+        },
+        {
+          "username": "mark87",
+          "content": "Slight tingling but results are worth it."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "AquaRepair Night Cream",
+      "description": "Rich night cream that repairs and nourishes while you sleep.",
+      "price": 24.99,
+      "brand": "DermaCare",
+      "rating": 4.6,
+      "image": "https://images.unsplash.com/photo-1612218934910-65d6b6fe36eb?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "stock": 0,
+      "comments": [
+        {
+          "username": "nightowl",
+          "content": "Wake up with super soft skin!"
+        },
+        {
+          "username": "emily_x",
+          "content": "A bit heavy but perfect for dry skin."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "SPF 50 Daily Sunscreen",
+      "description": "Non-greasy sunscreen with broad-spectrum protection.",
+      "price": 17.75,
+      "brand": "SunShield",
+      "rating": 4.4,
+      "image": "https://images.unsplash.com/photo-1689414480286-aae7c21fe1e2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "stock": 20,
+      "comments": [
+        {
+          "username": "beachfan",
+          "content": "No white cast, love it!"
+        },
+        {
+          "username": "tom_s",
+          "content": "Good protection but reapply often."
+        }
+      ]
+    }
+  ],
+  "bestSelling": [
+    {
+      "id": "1",
+      "name": "HydraGlow Moisturizer",
+      "description": "A lightweight daily moisturizer that hydrates and brightens the skin.",
+      "price": 19.99,
+      "brand": "GlowLab",
+      "rating": 4.5,
+      "image": "https://images.unsplash.com/photo-1629732047847-50219e9c5aef?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D0",
+      "stock": 99,
+      "comments": [
+        {
+          "username": "skincare_lover",
+          "content": "Super hydrating and absorbs quickly!"
+        },
+        {
+          "username": "anna92",
+          "content": "Great for daily use, my skin feels soft."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "ClearSkin Foaming Cleanser",
+      "description": "Gentle foaming cleanser that removes impurities without drying.",
+      "price": 14.5,
+      "brand": "PureDerm",
+      "rating": 4.2,
+      "image": "https://images.unsplash.com/photo-1716043426139-3573390e8477?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "stock": 90,
+      "comments": [
+        {
+          "username": "john_doe",
+          "content": "Works well for my oily skin."
+        },
+        {
+          "username": "lisa_beauty",
+          "content": "Nice cleanser but a bit drying in winter."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Vitamin C Brightening Serum",
+      "description": "A powerful serum that evens skin tone and boosts radiance.",
+      "price": 29.99,
+      "brand": "SkinRevive",
+      "rating": 4.7,
+      "image": "https://images.unsplash.com/photo-1723951174326-2a97221d3b7f?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "stock": 9,
+      "comments": [
+        {
+          "username": "glowqueen",
+          "content": "My skin looks brighter after just a week!"
+        },
+        {
+          "username": "mark87",
+          "content": "Slight tingling but results are worth it."
+        }
+      ]
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

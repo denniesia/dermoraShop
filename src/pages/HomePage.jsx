@@ -14,7 +14,7 @@ export default function HomePage() {
             <Header />
             <Hero />
             <FeatureSection />
-            <ProductSection title={"Best Selling Skincare"} />
+            <ProductSection title={"Best Selling Skincare"} tag={'bestSelling'} />
             <DiscountSection />
             <Footer />
         </>

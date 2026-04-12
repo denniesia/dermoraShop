@@ -2,14 +2,14 @@ import Loading from "../Loading";
 import ProductItem from "./ProductItem";
 import { useEffect, useState } from "react";
 
-export default function ProductSection({ title = "" }) {
+export default function ProductSection({ title = "", tag }) {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     
     useEffect(() => {
         async function getProducts() {
             try {
-                const res = await fetch('http://localhost:3001/products');
+                const res = await fetch(`http://localhost:3001/${tag}`);
                 const data = await res.json();
                 setProducts(data)
                 setLoading(false);
