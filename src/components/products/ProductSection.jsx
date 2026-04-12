@@ -4,15 +4,16 @@ import { useEffect, useState } from "react";
 
 export default function ProductSection({ title = "" }) {
     const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     
     useEffect(() => {
         async function getProducts() {
             try {
-                const res = await fetch('https://dummyjson.com/products/category/beauty');
+                const res = await fetch('http://localhost:3001/products');
                 const data = await res.json();
-                setProducts(data.products)
+                setProducts(data)
                 setLoading(false);
+                console.log(data)
             } catch (error) {
                 console.error("Error fetching products", error);
                 setLoading(false)

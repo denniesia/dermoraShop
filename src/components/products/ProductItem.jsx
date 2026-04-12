@@ -9,12 +9,12 @@ export default function ProductItem({ product }) {
         <article className="border rounded-3xl p-6 shadow-sm hover:shadow-xl transition cursor-pointer flex flex-col">
             <img
                 loading="lazy"
-                src={product.images[0]}
+                src={product.image}
                 className="rounded-xl mb-4 h-48 object-cover"
                 alt={product.title}
             />
 
-            <h3 className="font-semibold text-lg mb-1">{product.title}</h3>
+            <h3 className="font-semibold text-lg mb-1">{product.name}</h3>
 
             <p className="text-gray-500 mb-3 line-clamp-2">
                 {product.description}
