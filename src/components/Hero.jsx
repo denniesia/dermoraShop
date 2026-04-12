@@ -15,7 +15,7 @@ export default function Hero() {
             </div>
             <img
                 loading="lazy"
-                src="https://images.unsplash.com/photo-1556228720-195a672e8a03"
+                src="https://images.unsplash.com/photo-1629732097571-b042b35aa3ed?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 className="rounded-3xl shadow-xl"
                 alt="Natural skincare products"
             />
