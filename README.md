@@ -35,6 +35,7 @@
 - 🎨 Tailwind CSS
 - 🌐 Fetch API
 - 🔀 React Router
+- ⛓️‍💥 Json Server 
 
 ---
 
