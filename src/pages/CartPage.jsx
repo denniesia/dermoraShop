@@ -26,7 +26,7 @@ export default function CartPage() {
                                     {/* Product Info */}
                                     <div className="flex items-center gap-4">
                                         <img
-                                            src={item.thumbnail || item.images?.[0]}
+                                            src={item.image}
                                             alt={item.title}
                                             className="w-16 h-16 object-cover rounded-lg"
                                         />
