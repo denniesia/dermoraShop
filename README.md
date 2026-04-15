@@ -43,3 +43,6 @@
 
 ```bash
 git clone https://github.com/denniesia/dermoraShop
+
+To start the server `npm server`
+To start the app `npm run`
