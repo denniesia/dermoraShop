@@ -15,9 +15,6 @@ export default function CartPage() {
         addToCart(item)
 
     };
-
-
-
     const decreaseQuantity = (item) => {
         removeFromCart(item)
     };

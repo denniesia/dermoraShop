@@ -39,8 +39,16 @@ export default function ProductItem({ product }) {
             <div className="flex items-center justify-between mt-auto">
                 <span className="font-bold text-lg">€{product.price}</span>
 
-                <button className="bg-pink-500 hover:bg-pink-600 text-white text-sm px-10 py-2 rounded-xl transition hover:cursor-pointer" onClick={() => addToCart(product)}>
-                    Buy
+                <button
+                    onClick={() => addToCart(product)}
+                    disabled={product.stock === 0}
+                    className={`text-white text-sm px-10 py-2 rounded-xl transition
+    ${product.stock === 0
+                            ? "bg-gray-300 cursor-not-allowed"
+                            : "bg-pink-500 hover:bg-pink-600 cursor-pointer"}
+  `}
+                >
+                    {product.stock === 0 ? "Out of stock" : "Buy"}
                 </button>
             </div>
         </article>

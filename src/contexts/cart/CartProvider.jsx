@@ -12,6 +12,7 @@ export default function CartProvider({ children }) {
         const storedCart = localStorage.getItem("cart");
         return storedCart ? JSON.parse(storedCart) : [];
     });
+    const [products, setProducts] = useState([]);
 
 
     useEffect(() => {
@@ -19,19 +20,28 @@ export default function CartProvider({ children }) {
     }, [cart])
 
     const addToCart = (product) => {
-        console.log("ADDING:", cart);
         setCart((prev) => {
             const existing = prev.find(item => item.id === product.id);
+            console.log(existing.stock)
             if (existing) {
                 return prev.map((item) =>
+                    
                     item.id === product.id
                         ? { ...item, quantity: item.quantity + 1 }
                         : item
                 )
             }
+           
             return [...prev, { ...product, quantity: 1 }]
 
-        })
+        });
+
+        setProducts((prevProducts) =>
+            prevProducts.map((item) =>
+                item.id === product.id
+                    ? { ...item, stock: item.stock - 1 }
+                    : item)
+        )
 
     };
 
