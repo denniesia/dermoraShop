@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../contexts/cart/CartProvider";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function CartPage() {
     const { cart, removeFromCart } = useContext(CartContext);
@@ -104,6 +105,7 @@ export default function CartPage() {
                     </>
                 )}
             </div>
+            <Footer /> 
         </>
     );
 }
