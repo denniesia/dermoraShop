@@ -1,18 +1,25 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../contexts/cart/CartProvider";
+import { MdDelete } from "react-icons/md";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function CartPage() {
-    const { cart, removeFromCart } = useContext(CartContext);
+    const { cart, removeFromCart, addToCart } = useContext(CartContext);
 
-    const totalPrice = 0;
-    const increaseQuantity = (id) => {
-        // increment logic
+    const totalPrice = cart.reduce((total, item) => {
+        return total + item.price * item.quantity;
+    }, 0);
+
+    const increaseQuantity = (item) => {
+        addToCart(item)
+
     };
 
-    const decreaseQuantity = (id) => {
-        // decrement logic (prevent going below 1)
+
+
+    const decreaseQuantity = (item) => {
+        removeFromCart(item)
     };
 
     return (
@@ -34,64 +41,79 @@ export default function CartPage() {
                                 </p>
                             ) : (
                                 <>
-                                    <div className="space-y-4">
+                                    <div className="space-y-6">
                                         {cart.map((item) => (
                                             <div
                                                 key={item.id}
-                                                className="flex items-center justify-between border p-4 rounded-2xl shadow-sm hover:shadow-md transition"
+                                                className="flex items-center justify-between border border-gray-100 p-4 rounded-2xl shadow-sm hover:shadow-md transition"
                                             >
-                                                {/* Product Info */}
-                                                <div className="flex items-center gap-4">
+                                                {/* LEFT: Product Info */}
+                                                <div className="flex items-center gap-4 flex-1 min-w-0">
                                                     <img
                                                         src={item.image}
-                                                        alt={item.title}
-                                                        className="w-20 h-20 object-cover rounded-xl"
+                                                        alt={item.name}
+                                                        className="w-20 h-20 object-cover rounded-xl flex-shrink-0"
                                                     />
 
-                                                    <div>
-                                                        <h2 className="font-semibold text-lg">
-                                                            {item.title}
+                                                    <div className="min-w-0">
+                                                        <h2 className="font-semibold text-lg truncate">
+                                                            {item.name}
                                                         </h2>
+                                                        <p className="text-gray-500 text-sm truncate">
+                                                            {item.brand}
+                                                        </p>
                                                         <p className="text-gray-500">
                                                             €{item.price}
                                                         </p>
                                                     </div>
                                                 </div>
 
-                                                {/* Quantity Controls */}
-                                                <div className="flex items-center gap-3 bg-gray-100 px-3 py-2 rounded-xl">
-                                                    <button
-                                                        onClick={() => decreaseQuantity(item.id)}
-                                                        className="w-8 h-8 flex items-center justify-center bg-white rounded-lg shadow hover:bg-gray-200 transition"
-                                                    >
-                                                        −
-                                                    </button>
+                                                {/* RIGHT: Controls */}
+                                                <div className="flex items-center gap-6 w-[220px] justify-end flex-shrink-0">
 
-                                                    <span className="w-6 text-center font-medium">
-                                                        {item.quantity}
-                                                    </span>
+                                                    {/* Quantity */}
+                                                    <div className="flex items-center gap-3 bg-gray-100 px-3 py-2 rounded-xl">
+                                                        <button
+                                                            onClick={() => decreaseQuantity(item)}
+                                                            className="w-8 h-8 flex items-center justify-center bg-white rounded-lg shadow hover:bg-gray-200 transition"
+                                                        >
+                                                            −
+                                                        </button>
 
-                                                    <button
-                                                        onClick={() => increaseQuantity(item.id)}
-                                                        className="w-8 h-8 flex items-center justify-center bg-white rounded-lg shadow hover:bg-gray-200 transition"
-                                                    >
-                                                        +
-                                                    </button>
+                                                        <span className="w-6 text-center font-medium">
+                                                            {item.quantity}
+                                                        </span>
+
+                                                        <button
+                                                            onClick={() => increaseQuantity(item)}
+                                                            className="w-8 h-8 flex items-center justify-center bg-white rounded-lg shadow hover:bg-gray-200 transition"
+                                                        >
+                                                            +
+                                                        </button>
+                                                    </div>
+
+                                                    <div className="flex items-center gap-6 w-[220px] justify-end flex-shrink-0">
+                                                        <p className="text-lg">
+                                                            €{(item.price * item.quantity).toFixed(2)}
+                                                        </p>
+                                                        {/* Remove */}
+                                                        <button
+                                                            onClick={() => removeFromCart(item.id)}
+                                                            className="hover:cursor-pointer"
+                                                        >
+                                                            <MdDelete size={30} color="black" />
+                                                        </button>
+                                                    </div>
+
+
+
                                                 </div>
-
-                                                {/* Remove */}
-                                                <button
-                                                    onClick={() => removeFromCart(item.id)}
-                                                    className="text-red-500 font-medium hover:text-red-700 transition"
-                                                >
-                                                    Remove
-                                                </button>
                                             </div>
                                         ))}
                                     </div>
 
                                     {/* Total Section */}
-                                    <div className="mt-8 p-6 border rounded-2xl shadow-sm flex justify-between items-center">
+                                    <div className="mt-8 p-6 border border-gray-100 rounded-2xl shadow-sm flex justify-between items-center">
                                         <span className="text-lg font-medium text-gray-600">
                                             Total
                                         </span>
@@ -105,7 +127,7 @@ export default function CartPage() {
                     </>
                 )}
             </div>
-            <Footer /> 
+            <Footer />
         </>
     );
 }
