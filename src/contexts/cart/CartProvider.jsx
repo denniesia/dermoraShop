@@ -1,5 +1,5 @@
 import { Children, createContext, useEffect, useState } from "react";
-
+import { toast } from "sonner";
 export const CartContext = createContext({
     cart: [],
     addToCart(product) { },
@@ -22,27 +22,27 @@ export default function CartProvider({ children }) {
     const addToCart = (product) => {
         setCart((prev) => {
             const existing = prev.find(item => item.id === product.id);
-            console.log(existing.stock)
+
             if (existing) {
                 return prev.map((item) =>
-                    
                     item.id === product.id
                         ? { ...item, quantity: item.quantity + 1 }
                         : item
-                )
+                );
             }
-           
-            return [...prev, { ...product, quantity: 1 }]
 
+            return [...prev, { ...product, quantity: 1 }];
         });
 
         setProducts((prevProducts) =>
             prevProducts.map((item) =>
                 item.id === product.id
                     ? { ...item, stock: item.stock - 1 }
-                    : item)
-        )
+                    : item
+            )
+        );
 
+        toast.success(`${product.name} was added to the cart.`);
     };
 
     const removeFromCart = (product) => {
