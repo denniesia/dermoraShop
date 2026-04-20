@@ -12,6 +12,10 @@ app.get("/products", (req, res) => {
   res.json(products);
 });
 
+app.get("/", (req, res) => {
+  res.send("Dermora API is running 🚀");
+});
+
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
