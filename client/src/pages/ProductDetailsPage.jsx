@@ -2,20 +2,21 @@ import { useParams } from "react-router";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import useProducts from "../components/hooks/useProducts";
+import { CartContext } from "../contexts/cart/CartProvider";
+import { useContext } from "react";
+
+
 export default function ProductDetailsPage() {
     const { id } = useParams();
-    const { products, loading } = useProducts();
+    const { products, loading } = useProducts({ title:"", tag:"" });
+    const { addToCart } = useContext(CartContext);
 
     if (loading) {
         return <p className="text-center mt-10">Loading...</p>;
     }
 
     const product = products.find((p) => p.id == id);
-
-    if (!product) {
-        return <p className="text-center mt-10">Product not found</p>;
-    }
-
+    
 
     return (
         <>
@@ -39,11 +40,17 @@ export default function ProductDetailsPage() {
                             ⭐ {product.rating} / 5
                         </p>
                         <p className="text-gray-700 mb-6">{product.description}</p>
-                        <p className="text-2xl font-semibold mb-4">
+                      
+                        <div>
+                              <p className="text-2xl font-semibold mb-4">
                             ${product.price}
                         </p>
+                        </div>
 
-                        <button className="text-white px-8 py-4 rounded-xl bg-pink-500 hover:bg-pink-600">
+                        <button
+                         className="text-white px-8 py-4 rounded-xl mt-16 bg-pink-500 hover:bg-pink-600"
+                         onClick={() => addToCart(product)}
+                        > 
                             Add to Cart
                         </button>
                     </div>

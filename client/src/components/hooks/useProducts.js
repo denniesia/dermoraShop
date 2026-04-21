@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function useProducts({ title, tag }) {
+export default function useProducts({ title='', tag='' }) {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);

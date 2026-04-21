@@ -15,7 +15,7 @@ export default function ProductItem({ product }) {
                 <img
                     loading="lazy"
                     src={product.image}
-                    alt={product.title}
+                    alt={product.name}
                     className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
                 />
             </Link>

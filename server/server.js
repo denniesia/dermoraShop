@@ -1,5 +1,4 @@
 import express from "express";
-import cors from "cors";
 import fs from "fs";
 
 const app = express();
@@ -8,7 +7,7 @@ const products = JSON.parse(
   fs.readFileSync(new URL("./data/products.json", import.meta.url))
 );
 
-app.use(cors());
+
 app.use(express.json());
 
 // Root route (fixes "Not Found")
@@ -21,7 +20,7 @@ app.get("/products", (req, res) => {
   res.json(products);
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
