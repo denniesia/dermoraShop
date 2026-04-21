@@ -3,7 +3,8 @@ import { toast } from "sonner";
 export const CartContext = createContext({
     cart: [],
     addToCart(product) { },
-    removeFromCart(productId) { }
+    reduceQuantity(product) {},
+    removeFromCart(product) {},
 })
 
 
@@ -45,7 +46,7 @@ export default function CartProvider({ children }) {
         toast.success(`${product.name} was added to the cart.`);
     };
 
-    const removeFromCart = (product) => {
+    const reduceQuantity = (product) => {
         setCart((prev) => {
             const existing = prev.find(item => item.id === product.id);
 
@@ -64,10 +65,18 @@ export default function CartProvider({ children }) {
             return prev;
         });
     }
+    
+    const removeFromCart = (product) => {
+        setCart((prev) => {
+            
+            return prev.filter(item => item.id !== product.id);
+        });
+    }
 
     const contextValue = {
         cart,
         addToCart,
+        reduceQuantity,
         removeFromCart
     }
     return (

@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function CartPage() {
-    const { cart, removeFromCart, addToCart } = useContext(CartContext);
+    const { cart, reduceQuantity, addToCart, removeFromCart } = useContext(CartContext);
 
     const totalPrice = cart.reduce((total, item) => {
         return total + item.price * item.quantity;
@@ -16,7 +16,7 @@ export default function CartPage() {
 
     };
     const decreaseQuantity = (item) => {
-        removeFromCart(item)
+        reduceQuantity(item)
     };
 
     return (
@@ -95,7 +95,7 @@ export default function CartPage() {
                                                         </p>
                                                         {/* Remove */}
                                                         <button
-                                                            onClick={() => removeFromCart(item.id)}
+                                                            onClick={() => removeFromCart(item)}
                                                             className="hover:cursor-pointer"
                                                         >
                                                             <MdDelete size={30} color="black" />
