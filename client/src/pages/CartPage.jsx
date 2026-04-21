@@ -3,6 +3,7 @@ import { CartContext } from "../contexts/cart/CartProvider";
 import { MdDelete } from "react-icons/md";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { Link } from "react-router";
 
 export default function CartPage() {
     const { cart, reduceQuantity, addToCart, removeFromCart } = useContext(CartContext);
@@ -36,13 +37,15 @@ export default function CartPage() {
                                     key={item.id}
                                     className="flex items-center justify-between border border-gray-100 p-4 rounded-2xl shadow-sm hover:shadow-md transition"
                                 >
-                                    {/* LEFT */}
+                
                                     <div className="flex items-center gap-4 flex-1 min-w-0">
-                                        <img
-                                            src={item.image}
-                                            alt={item.name}
-                                            className="w-20 h-20 object-cover rounded-xl flex-shrink-0"
-                                        />
+                                        <Link to={`/shop/${item.id}`} >
+                                            <img
+                                                src={item.image}
+                                                alt={item.name}
+                                                className="w-20 h-20 object-cover rounded-xl flex-shrink-0"
+                                            />
+                                        </Link>
 
                                         <div className="min-w-0">
                                             <h2 className="font-semibold text-lg truncate">
@@ -76,7 +79,7 @@ export default function CartPage() {
                             ))}
                         </div>
 
-                        {/* TOTAL */}
+      
                         <div className="mt-10 p-6 border border-gray-100 rounded-2xl shadow-sm flex justify-between items-center">
                             <span>Total</span>
                             <span>€{totalPrice.toFixed(2)}</span>
