@@ -13,7 +13,6 @@ export default function ShopPage() {
         <>
             <Header />
             <TitleSection title={"Shop Skincare"} subtitle={"Explore products by category"}/>
-            <SearchBar />
             <ProductSection tag={'products'}/>
             <Footer />
         </>
