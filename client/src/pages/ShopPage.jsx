@@ -9,11 +9,11 @@ export default function ShopPage() {
 
 
     return (
-        <>
+       <div  className="min-h-screen flex flex-col">
             <Header />
             <TitleSection title={"Shop Skincare"} subtitle={"Explore products by category"}/>
             <ProductSection tag={'products'}/>
             <Footer />
-        </>
+        </div>
     );
 };

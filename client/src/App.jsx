@@ -12,7 +12,7 @@ function App() {
         <>
             <Toaster position="bottom-right" toastOptions={{
                 style: {
-                     background: "white",
+                    background: "white",
                     color: "#FD2666",
                     border: "1px solid #FD2666",
                 },
