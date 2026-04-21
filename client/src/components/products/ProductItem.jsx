@@ -1,18 +1,24 @@
 import { useContext } from "react";
 import { CartContext } from "../../contexts/cart/CartProvider";
+import { Link } from "react-router";
 
 export default function ProductItem({ product }) {
 
     const { addToCart } = useContext(CartContext);
 
     return (
-        <article className="border rounded-3xl p-6 shadow-sm hover:shadow-xl transition flex flex-col">
-            <img
-                loading="lazy"
-                src={product.image}
-                className="rounded-xl mb-4 h-48 object-cover"
-                alt={product.title}
-            />
+        <article className="border rounded-3xl p-6 shadow-sm hover:shadow-xl transition flex flex-col ">
+            <Link
+                to={`/shop/${product.id}`}
+                className="block mb-4 rounded-xl overflow-hidden hover:cursor-pointer"
+            >
+                <img
+                    loading="lazy"
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                />
+            </Link>
 
             <h3 className="font-semibold text-lg mb-1">{product.name}</h3>
 
@@ -27,15 +33,12 @@ export default function ProductItem({ product }) {
                 </span>
             </div>
 
-            {/* ✅ Stock status */}
             <p
-                className={`text-sm mb-3 font-medium ${product.stock > 0 ? "text-green-600" : "text-red-500"
+             className={`text-sm mb-3 font-medium ${product.stock > 0 ? "text-green-600" : "text-red-500"
                     }`}
             >
                 {product.stock > 0 ? "In Stock" : "Out of Stock"}
             </p>
-
-            {/* 💰 Price + Button */}
             <div className="flex items-center justify-between mt-auto">
                 <span className="font-bold text-lg">€{product.price}</span>
 
