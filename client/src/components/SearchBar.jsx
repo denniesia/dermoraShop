@@ -9,7 +9,6 @@ export default function SearchBar({onSearch}) {
         onSearch(value)
     }
 
-
     return (
         <>
             <div className="flex justify-center mb-8">

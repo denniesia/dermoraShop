@@ -21,7 +21,7 @@ export default function useProducts({ title='', tag='' }) {
             const url = params.toString()
                 ? `${baseUrl}?${params.toString()}`
                 : baseUrl;
-
+                
             try {
                 setLoading(true);
                 setError(null);

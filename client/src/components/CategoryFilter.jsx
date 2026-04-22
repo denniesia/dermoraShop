@@ -7,6 +7,7 @@ export default function CategoryFilter({ setTag, activeTag }) {
         "Night Cream",
         "Sunscreen",
     ];
+
     return (
         <section className="flex justify-center gap-4 mb-5 flex-wrap">
             {categories.map((cat) => (

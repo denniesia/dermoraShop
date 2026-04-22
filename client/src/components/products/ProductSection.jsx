@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 export default function ProductSection({ title = "" }) {
     const [tag, setTag] = useState("All");
-    const { products, loading, error } = useProducts({ title, tag });
+    const { products, loading } = useProducts({ title, tag });
 
     const [searchTerm, setSearchTerm] = useState("");
 
