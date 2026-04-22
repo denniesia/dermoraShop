@@ -1,6 +1,8 @@
-# 🛒 React eCommerce Store -> Dermora Shop
+# Dermora Shop - React eCommerce Store 
 
-> A modern and responsive eCommerce web application built with React, Context API, and Tailwind CSS.
+ A modern and responsive eCommerce web application built with React, Context API, and Tailwind CSS.
+
+ <img alt="image" src="https://github.com/denniesia/dermoraShop/blob/main/client/src/assets/images/landing_page.png" />
 
 ---
 
@@ -20,11 +22,6 @@
 - ⏳ Loading states for better UX
 
 
----
-
-## 🚀 Demo
-
-> Coming soon 🚧
 
 ---
 
@@ -39,10 +36,3 @@
 
 ---
 
-## 📦 Installation
-
-```bash
-git clone https://github.com/denniesia/dermoraShop
-
-To start the server `npm server`
-To start the app `npm run`
