@@ -3,6 +3,8 @@
  A modern and responsive eCommerce web application built with React, Context API, and Tailwind CSS.
 
  <img alt="image" src="https://github.com/denniesia/dermoraShop/blob/main/client/src/assets/images/landing_page.png" />
+ <img alt="image" src="https://github.com/denniesia/dermoraShop/blob/main/client/src/assets/images/shop_page.png" />
+ <img alt="image" src="https://github.com/denniesia/dermoraShop/blob/main/client/src/assets/images/cart_page.png" />
 
 ---
 
