@@ -33,7 +33,7 @@
 ## 🧰 Tech Stack
 
 - ⚛️ React (Vite)
-- 🧠 Context API (State Management)
+- 🧠 State Management
 - 🎨 Tailwind CSS
 - 🌐 Fetch API
 - 🔀 React Router
