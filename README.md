@@ -32,12 +32,12 @@
 
 ## 🧰 Tech Stack
 
-- ⚛️ React (Vite)
-- 🧠 State Management
-- 🎨 Tailwind CSS
-- 🌐 Fetch API
-- 🔀 React Router
-- ⛓️‍💥 Json Server 
+-  React (Vite)
+-  State Management
+-  Tailwind CSS
+-  Fetch API
+-  React Router
+-  Json Server 
 
 ---
 
