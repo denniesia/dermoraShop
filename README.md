@@ -19,12 +19,12 @@
 
 ## ✨ Features
 
-- 🛍️ Browse products from API
-- 🛒 Add to cart system
-- ➕ Quantity management per item
-- ❌ Remove items from cart
-- 💰 Automatic total price calculation
-- ⏳ Loading states for better UX
+-  Browse products from API
+-  Add to cart system
+-  Quantity management per item
+-  Remove items from cart
+-  Automatic total price calculation
+-  Loading states for better UX
 
 
 
